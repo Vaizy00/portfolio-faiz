@@ -31,7 +31,7 @@ export default function PortfolioHome() {
   }, [isMobileMenuOpen]);
 
   // --- KONFIGURASI ANIMASI ---
- const fadeUpVariant = {
+  const fadeUpVariant = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -70,58 +70,53 @@ export default function PortfolioHome() {
       {/* =========================================
           NAVBAR (DINAMIS: STATIC -> FLOATING PILL)
           ========================================= */}
+      {/* HEADER UTAMA */}
       <div
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 flex justify-center ${isScrolled ? "pt-6" : "pt-0"}`}
       >
         <nav
-          className={`flex items-center justify-between transition-all duration-500 ${
-            isScrolled
-              ? "w-[90%] md:w-[70%] bg-[#1a1a1a]/90 backdrop-blur-xl rounded-full px-6 py-3 shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-white/10"
-              : "w-full px-6 md:px-12 py-8 bg-transparent"
-          }`}
+          className={`flex items-center justify-between transition-all duration-500 ${isScrolled ? "w-[90%] md:w-[70%] bg-[#1a1a1a]/90 backdrop-blur-xl rounded-full px-6 py-3 shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-white/10" : "w-full px-6 md:px-12 py-8 bg-transparent"}`}
         >
+          {/* BAGIAN KIRI: Logo */}
           <div className="text-xl md:text-2xl font-extrabold tracking-tighter text-white relative z-50">
             MFW.
           </div>
 
-          {/* Menu Navigasi Desktop */}
-          <div className="hidden md:flex items-center gap-8 text-xs font-bold tracking-widest text-gray-300 uppercase">
-            <a href="#about" className="hover:text-white transition-colors">
-              Tentang
+          {/* BAGIAN KANAN: Menu & Tombol */}
+          <div className="flex items-center gap-8 md:gap-10">
+            <div className="hidden md:flex items-center gap-8 text-xs font-bold tracking-widest text-gray-300 uppercase">
+              <a href="#about" className="hover:text-white transition-colors">
+                Tentang
+              </a>
+              <a
+                href="#projects"
+                className="hover:text-white transition-colors"
+              >
+                Karya
+              </a>
+              <a href="#contact" className="hover:text-white transition-colors">
+                Kontak
+              </a>
+            </div>
+            <a
+              href="https://wa.me/628559860606"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`hidden md:flex font-bold text-sm md:text-base rounded-full transition-colors items-center justify-center ${isScrolled ? "bg-[#FF5B14] text-white px-5 py-2 hover:bg-[#e04f10]" : "bg-white text-black px-6 py-3 hover:scale-105"}`}
+            >
+              Hubungi Saya
             </a>
-            <a href="#projects" className="hover:text-white transition-colors">
-              Karya
-            </a>
-            <a href="#contact" className="hover:text-white transition-colors">
-              Kontak
-            </a>
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden text-white relative z-50 p-2 focus:outline-none"
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
           </div>
-
-          {/* Tombol Hubungi Saya Desktop */}
-          <a
-            href="https://wa.me/628559860606"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`hidden md:flex font-bold text-sm md:text-base rounded-full transition-colors items-center justify-center ${
-              isScrolled
-                ? "bg-[#FF5B14] text-white px-5 py-2 hover:bg-[#e04f10]"
-                : "bg-white text-black px-6 py-3 hover:scale-105"
-            }`}
-          >
-            Hubungi Saya
-          </a>
-
-          {/* Hamburger Menu Toggle (Tampil Hanya di HP) */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-white relative z-50 p-2 focus:outline-none"
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
         </nav>
       </div>
 
@@ -172,13 +167,14 @@ export default function PortfolioHome() {
           SECTION 1: HERO
           ========================================= */}
       <section className="relative min-h-[100svh] md:min-h-[90vh] flex flex-col justify-center px-6 md:px-12 lg:px-24 pt-32 pb-48 md:pb-20">
-        <div className="absolute top-1/2 left-1/2 md:left-[60%] -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-[#FF5B14]/30 blur-[100px] rounded-full pointer-events-none z-0"></div>
+        <div className="absolute top-[60%] md:top-1/2 left-1/2 md:left-[60%] -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-[#FF5B14]/30 blur-[100px] rounded-full pointer-events-none z-0"></div>
 
+        {/* Foto Profil (Diturunkan di Mobile) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className="absolute top-1/2 left-1/2 md:left-[60%] -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] md:w-[750px] md:h-[750px] z-0 pointer-events-none opacity-50 md:opacity-70"
+          className="absolute top-[60%] md:top-1/2 left-1/2 md:left-[60%] -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] md:w-[750px] md:h-[750px] z-0 pointer-events-none opacity-50 md:opacity-70"
           style={{
             WebkitMaskImage:
               "radial-gradient(circle, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 70%)",
