@@ -31,24 +31,19 @@ export default function PortfolioHome() {
   }, [isMobileMenuOpen]);
 
   // --- KONFIGURASI ANIMASI ---
-  const fadeUpVariant: Variants = {
+ const fadeUpVariant = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        type: "spring" as const,
-        stiffness: 60,
-        damping: 15,
-        duration: 0.8,
-      },
+      transition: { type: "spring", stiffness: 60, damping: 15, duration: 0.8 },
     },
-  };
+  } as any;
 
-  const staggerContainer: Variants = {
+  const staggerContainer = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
-  };
+  } as any;
 
   return (
     <main className="bg-[#050505] font-sans selection:bg-[#FF5B14] selection:text-white overflow-hidden relative">
