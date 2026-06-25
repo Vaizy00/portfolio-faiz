@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Download, ArrowUpRight, ArrowRight, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -31,15 +31,21 @@ export default function PortfolioHome() {
   }, [isMobileMenuOpen]);
 
   // --- KONFIGURASI ANIMASI ---
-  const fadeUpVariant = {
+  const fadeUpVariant: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { type: "spring", stiffness: 60, damping: 15, duration: 0.8 },
+      transition: {
+        type: "spring" as const,
+        stiffness: 60,
+        damping: 15,
+        duration: 0.8,
+      },
     },
   };
-  const staggerContainer = {
+
+  const staggerContainer: Variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
   };
