@@ -731,7 +731,7 @@ export default function PortfolioHome() {
             >
               <div className="h-48 bg-[#1a1a1a] relative overflow-hidden">
                 <img
-                  src="/monitoring.png"
+                  src="/monitoring2.png"
                   alt="Sistem Monitoring Kesehatan"
                   className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700"
                 />
@@ -741,17 +741,19 @@ export default function PortfolioHome() {
                   Sistem Monitoring Kesehatan
                 </h3>
                 <p className="text-sm text-gray-400 mb-4 line-clamp-2">
-                  Aplikasi berbasis struktur data C++ untuk pencatatan dan
-                  pemantauan data kesehatan pasien secara digital melalui
-                  terminal.
+                  Platform kalkulasi makronutrien klinis berbasis Full-Stack Web
+                  untuk pemantauan data kesehatan secara instan dan interaktif.
                 </p>
                 <div className="flex gap-2 flex-wrap">
                   <span className="text-[10px] font-bold bg-white/10 text-white/80 px-2 py-1 rounded-sm uppercase tracking-wider">
-                    C++
+                    Node.js
                   </span>
                   <span className="text-[10px] font-bold bg-white/10 text-white/80 px-2 py-1 rounded-sm uppercase tracking-wider">
-                    Data Structures
+                    Tailwind CSS
                   </span>
+                  <span className="text-[10px] font-bold bg-white/10 text-white/80 px-2 py-1 rounded-sm uppercase tracking-wider">
+                    JavaScript
+                  </span>                  
                 </div>
               </div>
             </motion.div>
