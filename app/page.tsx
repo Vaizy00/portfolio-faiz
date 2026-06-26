@@ -520,7 +520,6 @@ export default function PortfolioHome() {
           ========================================= */}
       <section className="bg-white py-24 px-6 md:px-12 lg:px-24">
         <div className="max-w-6xl mx-auto">
-          {/* Animasi Judul (Akan menyala oranye saat dilewati kursor) */}
           <motion.h2
             initial="hidden"
             whileInView="visible"
@@ -543,12 +542,14 @@ export default function PortfolioHome() {
             {/* UI/UX Design */}
             <motion.div
               variants={fadeUpVariant}
-              className="bg-white border-2 border-gray-100 p-8 rounded-2xl shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,91,20,0.15)] hover:border-dashed hover:border-[#FF5B14] group cursor-pointer"
+              whileTap={{ scale: 0.97 }}
+              tabIndex={0}
+              className="bg-white border-2 border-gray-100 p-8 rounded-2xl shadow-sm transition-all duration-300 hover:-translate-y-2 focus:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,91,20,0.15)] focus:shadow-[0_10px_30px_rgba(255,91,20,0.15)] hover:border-dashed focus:border-dashed hover:border-[#FF5B14] focus:border-[#FF5B14] group cursor-pointer outline-none [-webkit-tap-highlight-color:transparent]"
             >
-              <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#FF5B14]/10 transition-colors duration-300">
-                <PenTool className="w-6 h-6 text-gray-600 group-hover:text-[#FF5B14] transition-colors duration-300" />
+              <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#FF5B14]/10 group-focus:bg-[#FF5B14]/10 transition-colors duration-300">
+                <PenTool className="w-6 h-6 text-gray-600 group-hover:text-[#FF5B14] group-focus:text-[#FF5B14] transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#FF5B14] transition-colors duration-300">
+              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#FF5B14] group-focus:text-[#FF5B14] transition-colors duration-300">
                 UI/UX Design
               </h3>
               <p className="text-sm text-gray-500">
@@ -559,12 +560,14 @@ export default function PortfolioHome() {
             {/* Front-end Development */}
             <motion.div
               variants={fadeUpVariant}
-              className="bg-white border-2 border-gray-100 p-8 rounded-2xl shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,91,20,0.15)] hover:border-dashed hover:border-[#FF5B14] group cursor-pointer"
+              whileTap={{ scale: 0.97 }}
+              tabIndex={0}
+              className="bg-white border-2 border-gray-100 p-8 rounded-2xl shadow-sm transition-all duration-300 hover:-translate-y-2 focus:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,91,20,0.15)] focus:shadow-[0_10px_30px_rgba(255,91,20,0.15)] hover:border-dashed focus:border-dashed hover:border-[#FF5B14] focus:border-[#FF5B14] group cursor-pointer outline-none [-webkit-tap-highlight-color:transparent]"
             >
-              <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#FF5B14]/10 transition-colors duration-300">
-                <Code className="w-6 h-6 text-gray-600 group-hover:text-[#FF5B14] transition-colors duration-300" />
+              <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#FF5B14]/10 group-focus:bg-[#FF5B14]/10 transition-colors duration-300">
+                <Code className="w-6 h-6 text-gray-600 group-hover:text-[#FF5B14] group-focus:text-[#FF5B14] transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#FF5B14] transition-colors duration-300">
+              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#FF5B14] group-focus:text-[#FF5B14] transition-colors duration-300">
                 Front-end Development
               </h3>
               <p className="text-sm text-gray-500">
@@ -575,12 +578,14 @@ export default function PortfolioHome() {
             {/* Back-end Development */}
             <motion.div
               variants={fadeUpVariant}
-              className="bg-white border-2 border-gray-100 p-8 rounded-2xl shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,91,20,0.15)] hover:border-dashed hover:border-[#FF5B14] group cursor-pointer"
+              whileTap={{ scale: 0.97 }}
+              tabIndex={0}
+              className="bg-white border-2 border-gray-100 p-8 rounded-2xl shadow-sm transition-all duration-300 hover:-translate-y-2 focus:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,91,20,0.15)] focus:shadow-[0_10px_30px_rgba(255,91,20,0.15)] hover:border-dashed focus:border-dashed hover:border-[#FF5B14] focus:border-[#FF5B14] group cursor-pointer outline-none [-webkit-tap-highlight-color:transparent]"
             >
-              <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#FF5B14]/10 transition-colors duration-300">
-                <Database className="w-6 h-6 text-gray-600 group-hover:text-[#FF5B14] transition-colors duration-300" />
+              <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#FF5B14]/10 group-focus:bg-[#FF5B14]/10 transition-colors duration-300">
+                <Database className="w-6 h-6 text-gray-600 group-hover:text-[#FF5B14] group-focus:text-[#FF5B14] transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#FF5B14] transition-colors duration-300">
+              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#FF5B14] group-focus:text-[#FF5B14] transition-colors duration-300">
                 Back-end Development
               </h3>
               <p className="text-sm text-gray-500">
@@ -591,12 +596,14 @@ export default function PortfolioHome() {
             {/* Graphic Design */}
             <motion.div
               variants={fadeUpVariant}
-              className="bg-white border-2 border-gray-100 p-8 rounded-2xl shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,91,20,0.15)] hover:border-dashed hover:border-[#FF5B14] group cursor-pointer"
+              whileTap={{ scale: 0.97 }}
+              tabIndex={0}
+              className="bg-white border-2 border-gray-100 p-8 rounded-2xl shadow-sm transition-all duration-300 hover:-translate-y-2 focus:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,91,20,0.15)] focus:shadow-[0_10px_30px_rgba(255,91,20,0.15)] hover:border-dashed focus:border-dashed hover:border-[#FF5B14] focus:border-[#FF5B14] group cursor-pointer outline-none [-webkit-tap-highlight-color:transparent]"
             >
-              <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#FF5B14]/10 transition-colors duration-300">
-                <Palette className="w-6 h-6 text-gray-600 group-hover:text-[#FF5B14] transition-colors duration-300" />
+              <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#FF5B14]/10 group-focus:bg-[#FF5B14]/10 transition-colors duration-300">
+                <Palette className="w-6 h-6 text-gray-600 group-hover:text-[#FF5B14] group-focus:text-[#FF5B14] transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#FF5B14] transition-colors duration-300">
+              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#FF5B14] group-focus:text-[#FF5B14] transition-colors duration-300">
                 Graphic Design
               </h3>
               <p className="text-sm text-gray-500">
@@ -639,15 +646,18 @@ export default function PortfolioHome() {
             variants={staggerContainer}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
+            {/* Project 1 */}
             <motion.div
               variants={fadeUpVariant}
-              className="bg-[#111] border border-white/5 rounded-2xl overflow-hidden group cursor-pointer hover:border-[#FF5B14]/50 transition-colors shadow-lg"
+              whileTap={{ scale: 0.97 }}
+              tabIndex={0}
+              className="bg-[#111] border border-white/5 rounded-2xl overflow-hidden group cursor-pointer hover:border-[#FF5B14]/50 focus:border-[#FF5B14]/50 transition-colors shadow-lg outline-none [-webkit-tap-highlight-color:transparent]"
             >
               <div className="h-48 bg-[#1a1a1a] relative overflow-hidden">
                 <img
                   src="/UASSSSS.jpg"
                   alt="UI Travel Jepang"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-110 group-focus:scale-110 transition-transform duration-700"
                 />
               </div>
               <div className="p-6">
@@ -669,15 +679,18 @@ export default function PortfolioHome() {
               </div>
             </motion.div>
 
+            {/* Project 2 */}
             <motion.div
               variants={fadeUpVariant}
-              className="bg-[#111] border border-white/5 rounded-2xl overflow-hidden group cursor-pointer hover:border-[#FF5B14]/50 transition-colors shadow-lg"
+              whileTap={{ scale: 0.97 }}
+              tabIndex={0}
+              className="bg-[#111] border border-white/5 rounded-2xl overflow-hidden group cursor-pointer hover:border-[#FF5B14]/50 focus:border-[#FF5B14]/50 transition-colors shadow-lg outline-none [-webkit-tap-highlight-color:transparent]"
             >
               <div className="h-48 bg-[#1a1a1a] relative overflow-hidden">
                 <img
                   src="/monitoring2.png"
                   alt="Sistem Monitoring Kesehatan"
-                  className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover object-top group-hover:scale-110 group-focus:scale-110 transition-transform duration-700"
                 />
               </div>
               <div className="p-6">
@@ -697,17 +710,20 @@ export default function PortfolioHome() {
                   </span>
                   <span className="text-[10px] font-bold bg-white/10 text-white/80 px-2 py-1 rounded-sm uppercase tracking-wider">
                     JavaScript
-                  </span>
+                  </span>                  
                 </div>
               </div>
             </motion.div>
 
+            {/* Project 3 */}
             <motion.div
               variants={fadeUpVariant}
-              className="bg-[#111] border border-white/5 rounded-2xl overflow-hidden group cursor-pointer hover:border-[#FF5B14]/50 transition-colors shadow-lg"
+              whileTap={{ scale: 0.97 }}
+              tabIndex={0}
+              className="bg-[#111] border border-white/5 rounded-2xl overflow-hidden group cursor-pointer hover:border-[#FF5B14]/50 focus:border-[#FF5B14]/50 transition-colors shadow-lg outline-none [-webkit-tap-highlight-color:transparent]"
             >
               <div className="h-48 bg-gradient-to-br from-[#FF5B14] to-[#7A2800] relative overflow-hidden flex flex-col items-center justify-center p-4">
-                <span className="text-white font-extrabold text-4xl group-hover:scale-110 transition-transform duration-700 drop-shadow-xl">
+                <span className="text-white font-extrabold text-4xl group-hover:scale-110 group-focus:scale-110 transition-transform duration-700 drop-shadow-xl">
                   MFW.
                 </span>
                 <span className="text-white/70 font-bold tracking-widest text-sm mt-2">
