@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { Download, ArrowUpRight, ArrowRight, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -70,7 +72,6 @@ export default function PortfolioHome() {
       {/* =========================================
           NAVBAR (DINAMIS: STATIC -> FLOATING PILL)
           ========================================= */}
-      {/* HEADER UTAMA */}
       <div
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 flex justify-center ${isScrolled ? "pt-6" : "pt-0"}`}
       >
@@ -184,7 +185,7 @@ export default function PortfolioHome() {
         >
           <img
             src="/profile.jpeg"
-            alt="Muhammad Faiz"
+            alt="Muhammad Faiz Widyatmoko"
             className="w-full h-full object-cover blur-[3px]"
             style={{ objectPosition: "center top" }}
           />
@@ -363,26 +364,6 @@ export default function PortfolioHome() {
                 </svg>
               </a>
               <a
-                href="#"
-                className="p-3 border border-gray-200 rounded-full hover:bg-gray-100 transition-all"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                  <rect width="4" height="12" x="2" y="9" />
-                  <circle cx="4" cy="4" r="2" />
-                </svg>
-              </a>
-              <a
                 href="https://github.com/vaizy00"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -418,10 +399,12 @@ export default function PortfolioHome() {
             experience in UI/UX DESIGN, WEB DEVELOPMENT, and GRAPHIC DESIGN.
           </motion.h3>
 
+          {/* SPOTIFY WIDGET SECTION */}
           <div className="w-full">
             <p className="text-xs font-bold text-gray-400 tracking-widest mb-6 uppercase text-center">
               My Favorite Tracks
             </p>
+
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -429,92 +412,38 @@ export default function PortfolioHome() {
               variants={staggerContainer}
               className="grid grid-cols-1 md:grid-cols-2 gap-6"
             >
+              {/* Lagu 1: Hindia - Evaluasi */}
               <motion.div
                 variants={fadeUpVariant}
-                className="bg-[#181818] p-4 rounded-[20px] flex flex-col md:flex-row items-center justify-between shadow-xl relative text-left"
+                className="w-full transition-transform hover:scale-105 duration-300"
               >
-                <div className="flex items-center gap-4 w-full">
-                  <img
-                    src="/artworks-n4fCQpaSGuKQ-0-t500x500.jpg"
-                    alt="Everything You Are Cover"
-                    className="w-16 h-16 rounded-md object-cover"
-                  />
-                  <div>
-                    <h4 className="font-bold text-white text-[15px]">
-                      Everything You Are
-                    </h4>
-                    <p className="text-[11px] text-gray-400 font-medium mb-2">
-                      <span className="bg-gray-700 text-white px-1 rounded-sm text-[9px] mr-1">
-                        E
-                      </span>
-                      Hindia
-                    </p>
-                    <button className="flex items-center gap-1 text-[10px] font-bold text-white border border-gray-600 rounded-full px-3 py-1 hover:border-white">
-                      <svg
-                        className="w-3 h-3"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M12 4v16m8-8H4"
-                        ></path>
-                      </svg>{" "}
-                      Save on Spotify
-                    </button>
-                  </div>
-                </div>
-                <img
-                  src="/Spotify_logo_without_text.svg.png"
-                  alt="Spotify"
-                  className="w-6 h-6 absolute top-4 right-4"
-                />
+                <iframe
+                  style={{ borderRadius: "20px" }}
+                  src="https://open.spotify.com/embed/track/5WOSNVChcadlsCRiqXE45K?utm_source=generator&theme=0"
+                  width="100%"
+                  height="152"
+                  frameBorder="0"
+                  allowFullScreen={false}
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                ></iframe>
               </motion.div>
 
+              {/* Lagu 2: Hindia - Cincin */}
               <motion.div
                 variants={fadeUpVariant}
-                className="bg-[#181818] p-4 rounded-[20px] flex flex-col md:flex-row items-center justify-between shadow-xl relative text-left"
+                className="w-full transition-transform hover:scale-105 duration-300"
               >
-                <div className="flex items-center gap-4 w-full">
-                  <img
-                    src="/17f3242d1df3ef780809cd4a259adc5f.jpg"
-                    alt="Cincin Cover"
-                    className="w-16 h-16 rounded-md object-cover"
-                  />
-                  <div>
-                    <h4 className="font-bold text-white text-[15px]">Cincin</h4>
-                    <p className="text-[11px] text-gray-400 font-medium mb-2">
-                      <span className="bg-gray-700 text-white px-1 rounded-sm text-[9px] mr-1">
-                        E
-                      </span>
-                      Hindia
-                    </p>
-                    <button className="flex items-center gap-1 text-[10px] font-bold text-white border border-gray-600 rounded-full px-3 py-1 hover:border-white">
-                      <svg
-                        className="w-3 h-3"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M12 4v16m8-8H4"
-                        ></path>
-                      </svg>{" "}
-                      Save on Spotify
-                    </button>
-                  </div>
-                </div>
-                <img
-                  src="/Spotify_logo_without_text.svg.png"
-                  alt="Spotify"
-                  className="w-6 h-6 absolute top-4 right-4"
-                />
+                <iframe
+                  style={{ borderRadius: "20px" }}
+                  src="https://open.spotify.com/embed/track/7J0isBrUxhIYZVdrBOOlIh?flow_ctx=11bc7576-e089-4e31-a754-c4bf4bcbc323%3A1782476886&creation_point=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F4PTG3Z6ehGkBFwjybzWkR8?utm_source=generator&theme=0"
+                  width="100%"
+                  height="152"
+                  frameBorder="0"
+                  allowFullScreen={false}
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                ></iframe>
               </motion.div>
             </motion.div>
           </div>
@@ -753,7 +682,7 @@ export default function PortfolioHome() {
                   </span>
                   <span className="text-[10px] font-bold bg-white/10 text-white/80 px-2 py-1 rounded-sm uppercase tracking-wider">
                     JavaScript
-                  </span>                  
+                  </span>
                 </div>
               </div>
             </motion.div>
@@ -823,7 +752,7 @@ export default function PortfolioHome() {
         </motion.div>
 
         <div className="absolute bottom-6 left-6 text-left text-gray-500 text-xs font-medium">
-          MH. &copy; 2026 Muhammad Faiz Widyatmoko
+          MFW. &copy; 2026 Muhammad Faiz Widyatmoko
         </div>
       </section>
     </main>
