@@ -3,7 +3,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Download, ArrowUpRight, ArrowRight, Menu, X } from "lucide-react";
+import {
+  Download,
+  ArrowUpRight,
+  ArrowRight,
+  Menu,
+  X,
+  PenTool,
+  Code,
+  Database,
+  Palette,
+} from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function PortfolioHome() {
@@ -510,12 +520,13 @@ export default function PortfolioHome() {
           ========================================= */}
       <section className="bg-white py-24 px-6 md:px-12 lg:px-24">
         <div className="max-w-6xl mx-auto">
+          {/* Animasi Judul (Akan menyala oranye saat dilewati kursor) */}
           <motion.h2
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUpVariant}
-            className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-16 uppercase tracking-tighter text-center"
+            className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-16 uppercase tracking-tighter text-center cursor-default hover:text-[#FF5B14] transition-colors duration-500"
           >
             I SPECIALIZE IN A RANGE OF
             <br />
@@ -529,14 +540,15 @@ export default function PortfolioHome() {
             variants={staggerContainer}
             className="grid grid-cols-1 md:grid-cols-2 gap-6"
           >
+            {/* UI/UX Design */}
             <motion.div
               variants={fadeUpVariant}
-              className="border border-gray-200 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow"
+              className="bg-white border-2 border-gray-100 p-8 rounded-2xl shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,91,20,0.15)] hover:border-dashed hover:border-[#FF5B14] group cursor-pointer"
             >
-              <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
-                <ArrowUpRight className="w-5 h-5" />
+              <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#FF5B14]/10 transition-colors duration-300">
+                <PenTool className="w-6 h-6 text-gray-600 group-hover:text-[#FF5B14] transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#FF5B14] transition-colors duration-300">
                 UI/UX Design
               </h3>
               <p className="text-sm text-gray-500">
@@ -544,14 +556,15 @@ export default function PortfolioHome() {
               </p>
             </motion.div>
 
+            {/* Front-end Development */}
             <motion.div
               variants={fadeUpVariant}
-              className="border border-gray-200 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow"
+              className="bg-white border-2 border-gray-100 p-8 rounded-2xl shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,91,20,0.15)] hover:border-dashed hover:border-[#FF5B14] group cursor-pointer"
             >
-              <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
-                <ArrowUpRight className="w-5 h-5" />
+              <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#FF5B14]/10 transition-colors duration-300">
+                <Code className="w-6 h-6 text-gray-600 group-hover:text-[#FF5B14] transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#FF5B14] transition-colors duration-300">
                 Front-end Development
               </h3>
               <p className="text-sm text-gray-500">
@@ -559,14 +572,15 @@ export default function PortfolioHome() {
               </p>
             </motion.div>
 
+            {/* Back-end Development */}
             <motion.div
               variants={fadeUpVariant}
-              className="border border-gray-200 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow"
+              className="bg-white border-2 border-gray-100 p-8 rounded-2xl shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,91,20,0.15)] hover:border-dashed hover:border-[#FF5B14] group cursor-pointer"
             >
-              <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
-                <ArrowUpRight className="w-5 h-5" />
+              <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#FF5B14]/10 transition-colors duration-300">
+                <Database className="w-6 h-6 text-gray-600 group-hover:text-[#FF5B14] transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#FF5B14] transition-colors duration-300">
                 Back-end Development
               </h3>
               <p className="text-sm text-gray-500">
@@ -574,14 +588,15 @@ export default function PortfolioHome() {
               </p>
             </motion.div>
 
+            {/* Graphic Design */}
             <motion.div
               variants={fadeUpVariant}
-              className="border border-gray-200 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow"
+              className="bg-white border-2 border-gray-100 p-8 rounded-2xl shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,91,20,0.15)] hover:border-dashed hover:border-[#FF5B14] group cursor-pointer"
             >
-              <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
-                <ArrowUpRight className="w-5 h-5" />
+              <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#FF5B14]/10 transition-colors duration-300">
+                <Palette className="w-6 h-6 text-gray-600 group-hover:text-[#FF5B14] transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#FF5B14] transition-colors duration-300">
                 Graphic Design
               </h3>
               <p className="text-sm text-gray-500">
